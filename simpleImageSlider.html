@@ -1,0 +1,508 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{
+            margin:0px; 
+            padding:0px;
+            box-sizing:border-box; 
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+        }
+
+        xmp{
+            display:inline; 
+        }
+
+        .container{
+            height:auto; 
+            width:1200px;
+            border:0px solid black;
+            padding:10px;
+            
+        }
+
+        html{
+            scroll-behavior: smooth; 
+        }
+
+        .header{
+            display:flex;
+            align-items:center; 
+            justify-content:space-between; 
+            border:1px solid black;
+            border-radius:4px;
+            
+            
+        }
+        .header .header-text, .home-link {
+            margin:10px 10px;
+        }
+        .header .header-text p{
+            font-size:25px;
+            font-weight:600;
+        }
+
+        .header .home-link{
+            border:1px solid black; 
+            padding:8px 5px;
+            background-color:#ff6961; 
+            color:black;
+            border-radius:4px;
+        }
+
+        .heading{
+            font-weight:200;
+            margin:10px 3px;
+        }
+
+        .pane-container{
+            display:flex; 
+            margin-top:20px;
+                        
+        }
+
+        .left-pane{
+            width:25%; 
+            position:fixed; 
+            overflow-y:scroll;
+            margin-top:0px;
+              
+            
+        }
+
+            .left-pane ul li {
+                border-bottom: 1px solid #c2c2c2;
+                border-right: 1px solid #c2c2c2;
+                border-top: 1px solid #c2c2c2;
+                font-size: 15px;
+                font-family: 'Segoe UI';
+                padding: 5px 0px;
+                list-style-type: none;
+                text-decoration: none;
+                letter-spacing: 1.5px;
+                line-height: 30px;
+            }
+
+            .left-pane p {
+                font-family: 'Segoe UI';
+                padding: 5px 0px;
+                letter-spacing: 1.5px;
+                line-height: 30px;
+                font-weight: 600;
+                font-size: 18px;
+                border-top: 1px solid #c2c2c2;
+            }
+
+                .left-pane ul li:hover {
+                    background-color: #ff6347; 
+                }
+
+        .right-pane {
+            width: 75%;
+            margin-left: 380px;
+            
+        }
+
+        
+
+        .buttons{
+            display:flex; 
+            align-items:center; 
+            justify-content:space-between; 
+        }
+
+        .buttons .button{
+            border:1px solid black; 
+            margin: 10px 5px;
+            padding:5px 15px;
+            background-color:#ff6961; 
+            color:black; 
+            cursor:pointer; 
+            border-radius:4px;
+        }
+        .main-content{
+            margin-top:25px;
+            height:100vh;
+        }
+
+        .main-content p{
+            padding:10px 5px;
+            //letter-spacing:1.0px;
+            line-height:30px;
+            font-size:18px;
+            //font-weight:100;
+        }
+
+            .main-content ol {
+                padding: 10px 5px;
+                margin-left: 30px;
+                letter-spacing: 1.5px;
+                line-height: 30px;
+            }
+
+            .main-content ol li{
+                margin-bottom:18px;
+                font-size:18px;
+            }
+
+        span{
+            color:#ff6347; 
+        }
+
+        #show {
+            position: absolute;
+            right: 8px;
+            background-color: black;
+            color: white;
+            padding:1px 2px;
+            border-radius:4px;
+            cursor:pointer; 
+        }
+
+        .hide{
+            display:none; 
+        }
+
+        .sub{
+            margin-left:10px;
+        }
+
+        .sub2 {
+            margin-left: 20px;
+        }
+
+        .video-container{
+            width:600px;
+            height:auto;
+            margin:10px auto;
+        }
+
+        .video-container video{
+            width:100%; 
+        }
+
+        a{
+            text-decoration:none; 
+            color:black;
+        }
+        .empty{
+            margin-bottom:100px;
+        }
+        
+        section{
+            height:100vh;
+        }
+
+        .anotherheading{
+            margin:15px 5px;
+            font-weight:200; 
+        }
+
+        .top {
+            margin-top: 20px;
+        }
+
+        #content{
+            border:1px solid black;
+        }
+
+       // @media screen and (max-width:500px) {
+         //   body {
+               // font-size:22px;
+            //}
+        //}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-text">
+                <p>Web<span>Guru</span></p>
+            </div>
+            <!--<div class="home-link">
+            <p>Back to Home</p>
+             </div>-->
+        </div>
+        <div class="pane-container">
+            <div class="left-pane">
+                <p>Table Of Contents</p>
+                <ul>
+                    <li class="tLink1"><a href="#html_css">HTML & CSS Part</a><span id="show">Show</span></li>
+                    <div class="hide">
+                        <li class="sub"><a href="#html_skeleton">HTML Skeleton</a></li>
+                        <li class="sub"><a href="#centering_container">Centering The Container</a></li>
+                        <li class="sub"><a href="#styling_image_holder">Styling The Image Holder Div</a></li>
+                        <li class="sub"><a href="#fitting_image">Fitting Image Into Image Holder Div</a></li>
+                    </div>
+                    <a href="#accessing_html"><li class="tLink">Accessing HTML Elements</li></a>
+                    <a href="#event_listener"><li class="tLink">Adding Event Listeners</li></a>
+                    <a href="#hardcoding"><li class="tLink">Hardcoding The Image</li></a>
+                    <a href="#storing_images"><li class="tLink">Using Array to Store/Access Images</li></a>
+                    <a href="#dynamic_image"><li class="tLink">Changing Images Dynamically Using Counter</li></a>
+                    <li class="tLink"><a href="#creating_server">Automating Our Slider</a><span id="show">Show</span></li>
+
+                    <div class="hide">
+                        <li class="sub"><a href="html_skeleton">HTML Skeleton</a></li>
+                        <li class="sub"><a href="#javascript_code">Centering The Container</a></li>
+                        <li class="sub"><a href="#javascript_code">Styling The Image Holder Div</a></li>
+                        <li class="sub"><a href="#javascript_code">Fitting Image Into Image Holder Div</a></li>
+                    </div>
+
+                    <a href="#running_server"><li class="tLink">Ensuring Buttons Override Automation</li></a>
+                    <a href="#final_code"><li class="tLink">Final Code (HTML Part)</li></a>
+                    <a href="#javascript_code"><li class="sub">JavaScript Part</li></a>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+
+                </ul>
+            </div>
+            <div class="right-pane">
+                <div class="buttons">
+                    <div class="button">< Previous</div>
+                    <div class="button">Next ></div>
+                </div>
+                <div class="main-content">
+                    <div class="section" id="section1">
+                        <h1 class="heading">How to Create a JS Image Slider?</h1>
+                        <div class="video-container">
+                            <video controls loop style="border:1px solid black">
+                                <source src="videos/slider-1.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+
+                        <p>Let's create a simpler version of image slider you come across websites.</p>
+
+
+
+                        <h2 class="heading top" id="html_css">HTML & CSS Part</h2>
+                        <p>We'll be writing html, css and js in the same file. So a single .html will do. </p>
+
+                        <h3 class="heading anotherheading" id="html_skeleton">HTML Skeleton</h3>
+                        <p>We need 3 divs: one for the image, one for buttons, and a wrapper for both.</p>
+
+                        <div class="video-container">
+                            <video controls loop style="border:1px solid black">
+                                <source src="videos/slider-2.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+
+                        <h3 class="heading anotherheading" id="centering_container">Centering the Container</h3>
+                        <p>We use CSS flex property to center the elements on screen.</p>
+
+                        <div class="video-container">
+                            <video controls loop style="border:1px solid black">
+                                <source src="videos/slider-3.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+
+                        <h3 class="heading anotherheading" id="styling_image_holder">Styling the Image Holder Div</h3>
+                        <p>Let's give a border to the image container div so that it appears on screen. </p>
+                        <p>Note: margin:auto is not needed. align-items: center is enough to center the divs.</p>
+
+                        <div class="video-container">
+                            <video controls loop style="border:1px solid black">
+                                <source src="videos/slider-4.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+
+                        <h3 class="heading anotherheading" id="fitting_image">Fitting Image Into Image Holder Div</h3>
+                        <p>We then ensure the image does not overflow its container by giving it 100% of the size of its container; in other words, the same size as that of its container.</p>
+
+                        <div class="video-container">
+                            <video controls loop style="border:1px solid black">
+                                <source src="videos/slider-5.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+
+
+
+
+
+
+
+                        <h2 class="heading top" id="accessing_html">Accessing HTML Elements</h2>
+                        <p>Time to add javascript between <code>script</code> tags and gain access to button elements.</p>
+                        <p>We use document.querySelector() to select the buttons.</p>
+                        <div class="video-container">
+                            <video controls loop style="border:1px solid black">
+                                <source src="videos/slider-6.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+
+
+
+                        <h2 class="heading top" id="event_listener">Adding Event Listeners</h2>
+                        <p>Next add 'click' event listener to the buttons to help us switch or change the images.</p>
+
+                        <div class="video-container">
+                            <video controls>
+                                <source src="videos/slider-7.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+
+                        <h2 class="heading top" id="hardcoding">Hardcoding The Image</h2>
+                        <p>Select the image element using its class 'image' and set its src property to '1.jpg'</p>
+                        <p>Note: You should have image file named '1.jpg' in your working folder</p>
+
+                        <div class="video-container">
+                            <video controls>
+                                <source src="videos/slider-8.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+
+                        <h2 class="heading top" id="dynamic_image">Using Array to Store/Access Images</h2>
+                        <p>Let's give the images 'numbers' as their names to simplify things.</p>
+                        <p>The extension of our images (.jpg) will be concatenated later using js to render them.</p>
+                        <div class="video-container">
+                            <video controls style="border:1px solid black;">
+                                <source src="videos/slider-9.mp4" />
+                            </video>
+                        </div>
+
+                        <h2 class="heading top" id="dynamic_image">Changing Images Dynamically Using Counter</h2>
+                        <p>Declare a counter variable with '0' value</p>
+                        <p>Increment the counter whenever the next button is clicked</p>
+                        <p>Decrement the counter whenever the prev button is clicked</p>
+                        <div class="video-container">
+                            <video controls style="border:1px solid black;">
+                                <source src="videos/slider-10.mp4" />
+                            </video>
+                        </div>
+
+                        <p>Then pass counter as the index value to 'images' array for selecting the image.</p>
+                        <p>Use if condition to ensure the counter does not exceed the length of our array.</p>
+                        <p>0 and images.length - 1 are the starting and ending points of our array respectively.</p>
+
+                        
+                        
+                        <h2 class="heading top" id="creating_server">Automating Our Slider</h2>
+                        <p>This can be done using setInterval function.</p>
+                        <div class="video-container">
+                            <video controls>
+                                <source src="videos/slider-11.mp4" type="video/mp4"/>
+                            </video>
+                        </div>
+                        
+                        <h2 class="heading top" id="running_server">Ensuring Buttons Override Automation</h2>
+                        <p>We just have to clear the setInterval function within 'click' events of our buttons.</p>
+                        
+                        <div class="video-container">
+                            <video controls>
+                                <source src="videos/slider-12.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+
+                        
+                        <h2 class="heading top" id="final_code">Final Code</h2>
+                        <br />
+                        <div class="server_code" id="server_code">
+
+
+                            <button id="btn" class="btn">Click To Copy</button>
+                            <div id="content" contenteditable="true">
+                                <p><code> const express = require('express');</code></p>
+                                <p><code>const app = express(); </code></p>
+
+
+                                <p><code>app.listen('3000', function () {</code></p>
+                                <p>
+                                    <code style="margin-left:25px;">
+
+                                        console.log('server is running @ 3000');
+                                    </code>
+                                </p>
+
+
+                                <p><code>})</code></p>
+                            </div>
+
+
+                        </div>
+
+                        <br /><br />
+                        
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script>
+
+            var content = document.querySelector('#content');
+            var btn = document.querySelector('#btn');
+
+            btn.addEventListener('click', copyText);
+        btn.style.padding = '2px';
+        btn.style.marginBottom = '2px';
+
+            function copyText() {
+                let temp = content.innerText;
+                copytoClipBoard(temp);
+
+            }
+
+            function copytoClipBoard(str) {
+                const textarea = document.createElement("textarea");
+                textarea.value = str;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand("copy");
+                document.body.removeChild(textarea);
+                btn.innerText = 'Copied!'
+                //output.innerHTML = "<h3>Copied content</h3>" + textarea.value;
+
+
+            }
+
+        console.log(content)
+
+        //var titleLinks = document.querySelecxtorAll('.tLink');
+        //var tLink1 = document.querySelector('.tLink1');
+
+        /*tLink1.addEventListener('click', function (e) {
+            e.target.nextElementSibling.classList.toggle('hide');
+        })*/
+
+        /*titleLinks.forEach((titleLink) => {
+            titleLink.addEventListener('click', function (e) {
+                alert('clicked')
+                console.log(e.target.nextSibling)
+            })
+        })*/
+
+        var shows = document.querySelectorAll('#show');
+        shows.forEach((show) => {
+            show.addEventListener('click', function (e) {
+                e.target.innerText = 'Show';
+                e.target.parentElement.nextElementSibling.classList.toggle('hide');
+
+            })
+        })
+
+
+
+            /*show.addEventListener('click', function (e) {
+            e.target.innerText = 'Show';
+            e.target.parentElement.nextElementSibling.classList.toggle('hide');
+
+        })*/
+
+    </script>
+
+</body>
+</html>

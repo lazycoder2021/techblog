@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{
+            margin:0px; 
+            padding:0px;
+            box-sizing:border-box; 
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+        }
+
+        .container{
+            height:auto; 
+            width:1200px;
+            border:0px solid black;
+            padding:10px;
+            
+        }
+
+        html{
+            scroll-behavior: smooth; 
+        }
+
+        .header{
+            display:flex;
+            align-items:center; 
+            justify-content:space-between; 
+            border:1px solid black;
+            border-radius:4px;
+            
+            
+        }
+        .header .header-text, .home-link {
+            margin:10px;
+        }
+        .header .header-text p{
+            font-size:25px;
+            font-weight:600;
+        }
+
+        .header .home-link{
+            border:1px solid black; 
+            padding:8px 5px;
+            background-color:#ff6961; 
+            color:black;
+            border-radius:4px;
+        }
+
+        .heading{
+            font-weight:200;
+        }
+
+        .pane-container{
+            display:flex; 
+            margin-top:20px;
+                        
+        }
+
+        .left-pane{
+            width:25%; 
+            position:fixed; 
+            overflow-y:scroll;
+            margin-top:0px;
+              
+            
+        }
+
+            .left-pane ul li {
+                border-bottom: 1px solid #c2c2c2;
+                border-right: 1px solid #c2c2c2;
+                border-top: 1px solid #c2c2c2;
+                font-size: 15px;
+                font-family: 'Segoe UI';
+                padding: 5px 0px;
+                list-style-type: none;
+                text-decoration: none;
+                letter-spacing: 1.5px;
+                line-height: 30px;
+            }
+
+            .left-pane p {
+                font-family: 'Segoe UI';
+                padding: 5px 0px;
+                letter-spacing: 1.5px;
+                line-height: 30px;
+                font-weight: 600;
+                font-size: 18px;
+                border-top: 1px solid #c2c2c2;
+            }
+
+                .left-pane ul li:hover {
+                    background-color: #ff6347; 
+                }
+
+        .right-pane {
+            width: 75%;
+            margin-left: 380px;
+            
+        }
+
+        .buttons{
+            display:flex; 
+            align-items:center; 
+            justify-content:space-between; 
+        }
+
+        .buttons .button{
+            border:1px solid black; 
+            margin: 10px 5px;
+            padding:5px 15px;
+            background-color:#ff6961; 
+            color:black; 
+            cursor:pointer; 
+            border-radius:4px;
+        }
+        .main-content{
+            margin-top:25px;
+            height:100vh;
+        }
+
+        .main-content p{
+            padding:10px 5px;
+            letter-spacing:1.5px;
+            line-height:30px;
+            
+        }
+
+            .main-content ul {
+                padding: 10px 5px;
+                margin-left: 30px;
+                letter-spacing: 1.5px;
+                line-height: 30px;
+            }
+        span{
+            color:#ff6347; 
+        }
+
+        .sub{
+            margin-left:10px;
+        }
+
+        .sub2 {
+            margin-left: 20px;
+        }
+
+        .video-container{
+            width:600px;
+            height:auto;
+            margin:10px auto;
+        }
+
+        .video-container video{
+            width:100%; 
+        }
+
+        a{
+            text-decoration:none; 
+            color:black;
+        }
+        .empty{
+            margin-bottom:100px;
+        }
+        
+        section{
+            height:100vh;
+        }
+
+        .menu{
+            width:30px; 
+            height:30px; 
+            border:1px solid black; 
+            border-radius:4px;
+        }
+
+        .hide{
+            display:none; 
+        }
+
+        .show {
+            display: block;
+        }
+
+        @media screen and (max-width: 600px) {
+            .left-pane {
+                display:none; 
+             }
+
+            .right-pane{
+                width:500px; 
+                margin-left:30px;
+            }
+
+            .main-content p {
+                padding: 10px 5px;
+                letter-spacing: 1px;
+                line-height: 20px;
+            }
+
+            .video-container {
+                width: 500px;
+                height: auto;
+                margin: 10px auto;
+            }
+
+                .video-container video {
+                    width: 100%;
+                }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-text">
+                <p>Web<span>Guru</span></p>
+            </div>
+            <!--<div class="home-link">
+        <p>Back to Home</p>
+    </div>-->
+        </div>
+        <div class="pane-container">
+            <div class="left-pane">
+                <p>Table Of Contents</p>
+                <ul>
+                    <a href="#section1"><li>Sample Text</li></a>
+                    <a href="#section2"><li>Sample Text</li></a>
+                    <a href="#"><li>Sample Text</li></a>
+                    <li class="sub">Sample Sub Title </li>
+                    <li class="sub2">Sample Sub Title </li>
+                    <li>Sample Text</li>
+                    <li>Sample Text</li>
+                    <li>Sample Text</li>
+                    <li>Sample Text</li>
+                    <li>Sample Text</li>
+                    <li>Sample Text</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li">
+                    <li style="color:transparent;">s</li>
+                </ul>
+            </div>
+            <!--toggle menu-->
+            <div class="menu"></div>
+            <div class="right-pane">
+                <div class="buttons">
+                    <div class="button">< Previous</div>
+                    <div class="button">Next ></div>
+                </div>
+                <div class="main-content">
+                    <div class="section" id="section1">
+                        <h1 class="heading">JavaScript Basics</h1>
+                        <p>C# is a strongly-typed language. It means we must declare the type of a variable that indicates the kind of values it is going to store, such as integer, float, decimal, text, etc. C# is a strongly-typed language. It means we must declare the type of a variable that indicates the kind of values it is going to store, such as integer, float, decimal, text, etc.C# is a strongly-typed language. </p>
+                        <p>It means we must declare the type of a variable that indicates the kind of values it is going to store, such as integer, float, decimal, text, etc.</p>
+
+                        <div class="video-container">
+                            <video controls>
+                                <source src="#" />
+                            </video>
+                        </div>
+
+                        <p id="v">It means we must declare the type of a variable that indicates the kind of values it is going to store, such as integer, float, decimal, text, etc.</p>
+
+                        <ul>
+                            <li>This is a sample text for the purpose of designing. We don't intend to hurt.</li>
+                            <li>This is a sample text for the purpose of designing. We don't intend to hurt</li>
+                            <li>We don't intend to hurt the sentiments of anyone.This is a sample text for.</li>
+                            <li>This is a sample text for the purpose of designing. We don't intend to hurt.</li>
+
+                        </ul>
+                    </div>
+                    <br/>
+                    <div class="section" id="section2">
+                        <h1 class="heading">CSS Basics</h1>
+                        <p>C# is a strongly-typed language. It means we must declare the type of a variable that indicates the kind of values it is going to store, such as integer, float, decimal, text, etc. C# is a strongly-typed language. It means we must declare the type of a variable that indicates the kind of values it is going to store, such as integer, float, decimal, text, etc.C# is a strongly-typed language. </p>
+                        <p>It means we must declare the type of a variable that indicates the kind of values it is going to store, such as integer, float, decimal, text, etc.</p>
+
+                        <div class="video-container">
+                            <video controls>
+                                <source src="#" />
+                            </video>
+                        </div>
+
+                        <p id="v">It means we must declare the type of a variable that indicates the kind of values it is going to store, such as integer, float, decimal, text, etc.</p>
+
+                        <ul>
+                            <li>This is a sample text for the purpose of designing. We don't intend to hurt.</li>
+                            <li>This is a sample text for the purpose of designing. We don't intend to hurt</li>
+                            <li>We don't intend to hurt the sentiments of anyone.This is a sample text for.</li>
+                            <li>This is a sample text for the purpose of designing. We don't intend to hurt.</li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                
+
+
+            </div>
+               
+            <script>
+                var menu = document.querySelector('.menu');
+                var leftPane = document.querySelector('.left-pane'); 
+                menu.addEventListener('click', function () {
+                    //alert('clicked');
+                    leftPane.style.display = 'block';   
+                })
+                
+            </script>
+            
+    </div>
+</body>
+</html>

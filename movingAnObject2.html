@@ -1,0 +1,423 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300&display=swap" rel="stylesheet">
+
+    <style>
+        .reflinks{
+            border:1px solid black; 
+            width:60%;
+            padding:10px;
+        }
+
+        .reflinks li{
+            margin:0px 0px 0px 25px;
+            font-size:22px;
+             
+        }
+
+        body {
+            background-color: #F6F3EB;
+        }
+        video{
+            height:400px; 
+            width:700px;
+            border:1px solid black;
+            margin-top:20px;
+            
+        }
+
+        .number-list{
+            margin-top:0px;
+        }
+
+        .gif-container{
+            border:0px solid black;
+            margin: 0px auto;
+            height:450px;
+            width:750px;
+        }
+
+        #gifs{
+            height:550px;
+            width:700px;
+            margin-bottom:0px;
+            border:0px solid black;
+            
+        }
+
+        #gifsLarger{
+            height:750px;
+            width: 800px;
+        }
+
+        li{
+            margin-top:20px;
+            margin-left:45px;
+            font-size:25px;
+        }
+
+        * {
+            font-family: 'Source Sans Pro';
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            background-color: white;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .left-pane {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            border: 0px solid black;
+            background-color: lightgoldenrodyellow;
+            height: 100%;
+            border-right:2px solid black;
+        }
+
+        .left-pane-heading{
+            padding:8px;
+            font-size:25px;
+        }
+
+            .left-pane a {
+                text-decoration: none;
+                font-size: 20px;
+                padding: 5px;
+                color:black;
+                
+            }
+
+                .left-pane a p {
+                    padding: 3px;
+                    font-weight: 200;
+                }
+
+
+
+
+        .right-pane {
+            border: 0px solid black;
+            width: 80%;
+            margin-left: 350px;
+        }
+
+            .right-pane .section1 {
+                height: auto;
+            }
+
+            .right-pane .section2 {
+                height: auto;
+            }
+
+            .right-pane .section3 {
+                height: auto;
+            }
+
+            .right-pane .section4 {
+                height: auto;
+            }
+
+            section h1{
+                font-size:40px;
+            }
+
+            section h2{
+                font-size:30px;
+                margin-top:30px;
+                font-weight:300;
+            }
+
+            section p{
+                margin-top:20px;
+                font-size:25px;
+                letter-spacing:0.2px;
+                line-height:45px;
+            }
+
+
+        #content {
+            border: 1px solid black;
+            width: 420px;
+            margin: 30px auto;
+            position:relative; 
+        }
+
+        p code{
+            padding:15px;
+            font-size:20px;
+            margin-bottom:0px;
+        }
+
+        #section6{
+            position:relative; 
+        }
+
+        .btn{
+            position:absolute; 
+            right:328px;
+            top:50px;
+            padding:3px;
+        }
+
+        .images{
+            border:1px solid black;
+            margin-top:20px;
+        }
+
+        .left-pane a.subtitle {
+            margin-left: 10px;
+            color: black;
+        }
+
+       .left-pane a.subtitle2 {
+            margin-left: 25px;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-pane">
+            <h3 class="left-pane-heading">Table Of Contents</h3>
+
+             <a href="#section4"><p>JavaScript Code for <br />Moving the Square </p></a>
+            <a href="#v1" class='subtitle'><p>Creating Our Square Dynamically </p></a>
+            <a href="#v2" class='subtitle'><p>Styling or Designing Our Square <br/>to Look Good</p></a>
+	    <a href="#v3" class='subtitle'><p>Enabling Our Square to Move <br/>Freely on Screen</p></a>
+            <a href="v4" class='subtitle'><p>Making Our Square Move[NO LINK]</p></a>
+		<a href="#v5" class='subtitle2'><p>Recording Keyboard Arrow Keys  </p></a>
+                <a href="#v6" class='subtitle2'><p>Checking Which Arrow Key Is <br/>Being Pressed / Creating <br/>The Movement Logic  </p></a>
+                <a href="#v7" class='subtitle2'><p>Creating Movement Variable (for <br/>deciding how many pixels our div <br/>should move for every click)  </p></a>
+            <a href="#v8" class='subtitle2'><p>Adding Movement Variable to <br/>our Movement Logic</p></a>
+                
+	    <a href="#section4" class='subtitle'><p>Final Code  </p></a>
+            
+
+
+            
+        </div>
+
+        <div class="right-pane">
+
+            
+            <section class="section4" id="section4">
+                <h1 id="v1">JavaScript Code for Moving the Square</h1id="v1">
+
+                <h2>Creating Our Square Dynamically</h2>
+
+                <video controls autoplay loop>
+                    <source src="videos/jsbasics1.mp4" type="video/mp4" />
+                </video>
+
+                <p>For Further Reading: (link to W3Schools website) or (create content here)</p>
+                <div class="reflinks">
+                    <ul>
+                        <li>What is a Window Object?</li>
+                        <li>What is an Event Listener?</li>
+                        <li>What is DOMContentLoaded Event?</li>
+                        <li>What is a Variable?</li>
+                        <li>What is a Callback Function?</li>
+                        <li>What is createElement() Method?</li>
+                        <li>What is textContent Method?</li>
+                    </ul>
+                </div>
+
+
+                <br />
+
+                <h2 id="v2">Styling or Designing Our Square to Look Good </h2>
+
+                <video controls autoplay loop>
+                    <source src="videos/jsbasics2.mp4" type="video/mp4" />
+                </video>
+                <p>For Further Reading: </p>
+                <div class="reflinks">
+                    <ul>
+                        <li>How to Style HTML Elements Dynamically Using JavaScript?</li>
+                    </ul>
+                </div>
+
+
+
+                <br />
+
+                <h2 id="v3">Enabling Our Square to Move Freely on Screen</h2>
+
+                <video controls autoplay loop>
+                    <source src="videos/jsbasics3.mp4" type="video/mp4" />
+                </video>
+                <p>For Further Reading: </p>
+                <div class="reflinks">
+                    <ul>
+                        <li>What is Absolute Positioning in CSS?</li>
+                    </ul>
+                </div>
+
+
+                <br />
+
+                <h2 id="v4">Recording Keyboard Arrow Keys</h2>
+
+                <video controls autoplay loop >
+                    <source src="videos/jsbasics4.mp4" type="video/mp4" />
+                </video>
+                <p>For Further Reading: </p>
+                <div class="reflinks">
+                    <ul>
+                        <li>What is Keydown Event?</li>
+                        <li>What are Function Arguments?</li>
+                        <li>Event (e) as Function Argument</li>
+                        <li>What is Alert Function?</li>
+                    </ul>
+                </div>
+
+
+                <br />
+
+                <br />
+
+                <h2 id="v5">Checking Which Arrow Key Is Being Pressed / Creating The Movement Logic </h2id="v5">
+
+                <video controls autoplay loop >
+                    <source src="videos/jsbasics5.mp4" type="video/mp4" />
+                </video>
+                <p>For Further Reading: </p>
+                <div class="reflinks">
+                    <ul>
+                        <li>What is If-Else Condition?</li>
+                    </ul>
+                </div>
+
+
+                <br />
+
+
+                <br />
+
+                <h2 id="v6">Creating Movement Variable (deciding how many pixels our div should move for every click)</h2>
+
+                <video controls autoplay loop>
+                    <source src="videos/jsbasics6.mp4" type="video/mp4" />
+                </video>
+
+                <br />
+
+                <h2 id="v7">Adding Movement Variable to our Movement Logic</h2>
+
+                <video controls autoplay loop>
+                    <source src="videos/jsbasics7.mp4" type="video/mp4" />
+                </video>
+
+                <video controls autoplay loop id="v8">
+                    <source src="videos/jsbasics9.mp4" type="video/mp4" />
+                </video>
+                <p>For Further Reading: </p>
+                <div class="reflinks">
+                    <ul>
+                        <li>What is style.left in Absolute Positioning?</li>
+                        <li>What is style.top in Absolute Positioning?</li>
+                    </ul>
+                </div>
+
+
+
+                <br />
+
+
+
+
+
+
+
+
+
+            </section>
+
+            <br />
+            
+            <br />
+            
+<br/>
+            <section class="section6" id="section6">
+                <h1>5. Final Code</h1>
+
+                <button id="btn" class="btn">Click To Copy</button>
+                <div id="content" contenteditable="true">
+                    <p><code> const express = require('express');</code></p>
+                    <p><code>const app = express(); </code></p>
+
+
+                    <p><code>app.get('/', (req, res) => {</code></p>
+                    <p>
+                        <code style="margin-left:25px;">
+
+                            res.send('If you were a developer @ google, this could be the google home page that you might be developing ;)');
+                        </code>
+                    </p>
+                    <p><code>})</code></p>
+
+
+                    <p><code>app.listen('3000', function () {</code></p>
+                    <p>
+                        <code style="margin-left:25px;">
+
+                            console.log('server is running @ 3000');
+                        </code>
+                    </p>
+
+
+                    <p><code>})</code></p>
+                </div>
+
+
+            </section>
+
+
+        </div>
+    </div>
+
+    <script>
+        var content = document.querySelector('#content');
+        var btn = document.querySelector('#btn');
+
+        btn.addEventListener('click', copyText);
+
+        function copyText() {
+            let temp = content.innerText;
+            copytoClipBoard(temp);
+
+        }
+
+        function copytoClipBoard(str) {
+            const textarea = document.createElement("textarea");
+            textarea.value = str;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+            //output.innerHTML = "<h3>Copied content</h3>" + textarea.value;
+            alert('copied!')//output.innerHTML = "<h3>Copied content</h3>" + textarea.value;
+
+        }
+
+        console.log(content)
+    </script>
+
+
+
+</body>
+</html>
